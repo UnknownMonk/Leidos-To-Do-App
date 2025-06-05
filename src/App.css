@@ -1,0 +1,109 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+select {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+}
+
+.todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.todo-form input,
+.todo-form select,
+.todo-form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  color: black;
+}
+
+.todo-item.completed span:first-of-type {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.priority {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.priority.low {
+  color: green;
+}
+
+.priority.medium {
+  color: orange;
+}
+
+.priority.high {
+  color: red;
+}
+
+.todo-stats {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  background: #8abaed;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+
+button:hover {
+  background: #0056b3;
+}
