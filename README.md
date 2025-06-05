@@ -1,25 +1,20 @@
-Todo App
+# Todo App
 
-A simple, filterable, and sortable Todo application built with React. This app allows users to manage their tasks, filter by status and priority, sort by creation date or priority, and persist data using localStorage.
+A simple, filterable, and sortable Todo application built with **React** and bootstrapped using **Vite**. This app allows users to manage their tasks, filter by status and priority, sort by creation date or priority, and persist data using **localStorage**.
 
-Features
+## Features
 
-✅ Add new todos with title and priority.
+* ✅ Add new todos with title and priority.
+* 🔄 Toggle todo completion.
+* 🗑️ Delete existing todos.
+* 🔍 Filter by status: All, Active, Completed.
+* 🎯 Filter by priority: Low, Medium, High.
+* 🔃 Sort todos by date or priority.
+* 💾 Local storage persistence.
 
-🔄 Toggle todo completion.
+## File Structure
 
-🗑️ Delete existing todos.
-
-🔍 Filter by status: All, Active, Completed.
-
-🎯 Filter by priority: Low, Medium, High.
-
-🔃 Sort todos by date or priority.
-
-💾 Local storage persistence.
-
-File Structure
-
+```
 src/
 ├── App.jsx                # Main app component
 ├── App.css               # App styling
@@ -31,40 +26,50 @@ src/
 │   └── TodoStats.jsx     # Display stats about todos
 ├── utils/
 │   └── todoUtils.js      # Filtering and sorting helpers
+```
 
-Setup
+## Setup
 
-1. Install dependencies
+### 1. Install dependencies using pnpm
 
-npm install
+```bash
+pnpm install
+```
 
-2. Run the app
+### 2. Run the app using Vite
 
-npm start
+```bash
+pnpm run dev
+```
 
-The app will open in your default browser at http://localhost:3000.
+The app will open in your default browser at `http://localhost:5173`.
 
-Code Highlights
+## Code Highlights
 
-Initial State with LocalStorage
+### Initial State with LocalStorage
 
+```js
 const [todos, setTodos] = useState(() => {
   const stored = localStorage.getItem('todos');
   return stored ? JSON.parse(stored) : initialTodos;
 });
+```
 
-Persisting Todos
+### Persisting Todos
 
+```js
 useEffect(() => {
   if (initialized) {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 }, [todos, initialized]);
+```
 
-Filtering and Sorting
+### Filtering and Sorting
 
-Handled via utility functions in utils/todoUtils.js:
+Handled via utility functions in `utils/todoUtils.js`:
 
+```js
 sortTodos(
   filterTodosByPriority(
     filterTodosByStatus(todos, filter),
@@ -72,11 +77,12 @@ sortTodos(
   ),
   sortBy
 );
+```
 
-Contributing
+## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-License
+## License
 
-MIT
+[MIT](LICENSE)
