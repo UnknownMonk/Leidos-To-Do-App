@@ -22,6 +22,7 @@ src/
 │   └── initialTodos.js   # Initial default todos
 ├── components/
 │   ├── TodoForm.jsx      # Form for adding todos
+|   ├── TodoItem.jsx      # li list with spans to lable todos
 │   ├── TodoList.jsx      # Display list of todos
 │   └── TodoStats.jsx     # Display stats about todos
 ├── utils/
